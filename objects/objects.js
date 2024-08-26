@@ -20,3 +20,16 @@ function isEmpty(obj) {
     }
     return true;
 };
+
+let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+  };
+
+let sum1 = 0;
+
+for (let prop in salaries) {
+    num = salaries[prop];
+    sum1 = sum1 + num;
+}
