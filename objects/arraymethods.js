@@ -25,7 +25,7 @@ function filterRangeInPlace(arr,a,b) {
             i--;
         }
     }
-    
+}
 // sort in decreasing order
 
 let arr = [5, 2, 1, -10, 8];
@@ -33,3 +33,13 @@ let arr = [5, 2, 1, -10, 8];
 function sortDecreasing(arr) {
     arr.sort((a,b) => a -b); 
 }
+
+//map to names
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users = [ john, pete, mary ];
+
+let names = users.map(item => item.name);
