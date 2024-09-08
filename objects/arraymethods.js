@@ -104,3 +104,22 @@ let users2 = [
 function groupById(users) {
    return users.reduce((prev, user) => ({...prev, [user.id]: {id: user.id, name: user.name, age: user.age}}), {})
 }
+
+//filter unique array members
+
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+    "Krishna", "Krishna", "Hare", "Hare", ":-O"
+  ];
+
+function unique(arr) {
+
+    const uniqueArr = [];
+    for (let i=0; i<arr.length; i++) {
+        if (!uniqueArr.includes(arr[i])) {
+            uniqueArr.push(arr[i])
+        }
+    }
+    return uniqueArr
+}
+
+console.log(unique(strings))
