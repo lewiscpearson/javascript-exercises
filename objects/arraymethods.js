@@ -11,3 +11,20 @@ function camelize (string) {
 // Filter range
 
 
+function filterRange(arr, a, b) {
+    return arr.filter((num) => num>= a && num <= b)
+}
+
+//filter range in place
+
+function filterRangeInPlace(arr,a,b) {
+    for (let i = 0; i < arr.length; i++) {
+        let val = arr[i];
+        console.log(val, i, a, b)
+        if (val < a || val > b) {
+            arr.splice(i, 1);
+            i--;
+            console.log("item removed: ", val, i, a, b)
+        }
+    }
+}
