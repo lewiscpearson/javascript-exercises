@@ -20,11 +20,16 @@ function filterRange(arr, a, b) {
 function filterRangeInPlace(arr,a,b) {
     for (let i = 0; i < arr.length; i++) {
         let val = arr[i];
-        console.log(val, i, a, b)
         if (val < a || val > b) {
             arr.splice(i, 1);
             i--;
-            console.log("item removed: ", val, i, a, b)
         }
     }
+    
+// sort in decreasing order
+
+let arr = [5, 2, 1, -10, 8];
+
+function sortDecreasing(arr) {
+    arr.sort((a,b) => a -b); 
 }
