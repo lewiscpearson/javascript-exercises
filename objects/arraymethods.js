@@ -43,3 +43,47 @@ let mary = { name: "Mary", age: 28 };
 let users = [ john, pete, mary ];
 
 let names = users.map(item => item.name);
+
+//map to objects
+
+let usersMapped = users.map(user => ({
+    fullName: `${user.name} ${user.surname}`,
+    id: user.id
+  }));
+
+  
+// sort users by age
+let john1 = { name: "John", age: 25 };
+let pete1 = { name: "Pete", age: 30 };
+let mary1 = { name: "Mary", age: 28 };
+
+let arr1 = [ pete1, john1, mary1 ];
+
+function sortByAge (arr) {
+    arr.sort((a,b) => a.age - b.age )
+}
+
+sortByAge(arr1)
+
+//shuffle an array
+
+function shuffle(arr) {
+    arr.sort((a,b) => Math.random() - 0.5);
+}
+
+// fisher-yates shuffle better
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+  
+      // swap elements array[i] and array[j]
+      // we use "destructuring assignment" syntax to achieve that
+      // you'll find more details about that syntax in later chapters
+      // same can be written as:
+      // let t = array[i]; array[i] = array[j]; array[j] = t
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+
