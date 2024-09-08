@@ -112,7 +112,6 @@ let strings = ["Hare", "Krishna", "Hare", "Krishna",
   ];
 
 function unique(arr) {
-
     const uniqueArr = [];
     for (let i=0; i<arr.length; i++) {
         if (!uniqueArr.includes(arr[i])) {
